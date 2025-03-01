@@ -2,7 +2,7 @@ import styled from "styled-components";
 import CardHome from "../CardHome";
 import CardSobreMim from "../CardSobreMim";
 import CardProjetos from "../CardProjetos";
-import CardSkills from "../Skills";
+import CardSkills from "../CardSkills";
 
 const Container = styled.div`
   display: flex;
