@@ -1,20 +1,29 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import CardsAmostra from "./components/Cards/CardsAmostra";
-import SpaceBackground from "./components/Background";
+
 import EstilosGlobais from "./components/EstilosGlobais";
 import Home from "./pages/Home";
+import SpaceBackground from "./components/Background/TelaAbertura";
+import BackGroundHome from "./components/Background/TelaHome";
 
 function App() {
   return (
-    <SpaceBackground>
+    <>
       <EstilosGlobais />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<CardsAmostra />} />          
-          <Route path="/home" element={<Home />} />          
+          <Route
+            path="/"
+            element={
+              <SpaceBackground>
+                <CardsAmostra />
+              </SpaceBackground>
+            }
+          />
+          <Route path="/home" element={<BackGroundHome><Home /></BackGroundHome>} />
         </Routes>
       </BrowserRouter>
-    </SpaceBackground>
+    </>
   );
 }
 

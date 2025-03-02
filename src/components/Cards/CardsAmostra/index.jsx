@@ -6,6 +6,7 @@ import CardSobreMim from "../CardSobreMim";
 import CardProjetos from "../CardProjetos";
 import CardSkills from "../CardSkills";
 import CardContato from "../CardContato";
+import SpaceBackground from "../../Background/TelaAbertura";
 
 const Container = styled.div`
   position: absolute;
@@ -99,17 +100,19 @@ export default function CardAmostra() {
   }, [cards.length, navigate]);
 
   return (
-    <Container>
-      {cards.map((card, index) => (
-        <CardWrapper
-          key={index}
-          className={index <= currentCard ? "active" : ""}
-          style={{ animationDelay: `${index * 5}s` }}
-        >
-          {card}
-        </CardWrapper>
-      ))}
-      {showFlash && <Flash />}
-    </Container>
+    <SpaceBackground>
+      <Container>
+        {cards.map((card, index) => (
+          <CardWrapper
+            key={index}
+            className={index <= currentCard ? "active" : ""}
+            style={{ animationDelay: `${index * 5}s` }}
+          >
+            {card}
+          </CardWrapper>
+        ))}
+        {showFlash && <Flash />}
+      </Container>
+    </SpaceBackground>
   );
 }
