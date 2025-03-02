@@ -8,8 +8,8 @@ import EstilosGlobais from "./components/EstilosGlobais";
 function App() {
   return (
     <SpaceBackground>
+      <EstilosGlobais />
       <BrowserRouter>
-        <EstilosGlobais />
         <Routes>
           <Route path="/" element={<CardsAmostra />} />
         </Routes>
