@@ -1,18 +1,19 @@
 import { BrowserRouter, Route, Routes } from "react-router";
-import "./App.css";
 // import CardHome from "./components/Cards/CardHome";
 // import CardSobreMim from "./components/Cards/CardSobreMim";
 import CardsAmostra from "./components/Cards/CardsAmostra";
 import SpaceBackground from "./components/Background";
+import EstilosGlobais from "./components/EstilosGlobais";
 
 function App() {
   return (
     <SpaceBackground>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<CardsAmostra />} />
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <EstilosGlobais />
+        <Routes>
+          <Route path="/" element={<CardsAmostra />} />
+        </Routes>
+      </BrowserRouter>
     </SpaceBackground>
   );
 }
