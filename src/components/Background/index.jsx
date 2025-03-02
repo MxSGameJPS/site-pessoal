@@ -54,7 +54,7 @@ const StyledSpace = styled.div`
     width: 520px;
     height: 180px;
     /* background: #656b6d; */
-    background: linear-gradient(90deg, #70808a, #000000, #70808a);
+    background: linear-gradient(90deg, #ffffff, #000000, #878f97, #878f97, #000000, #878f97, #878f97, #000000, #ffffff);
     clip-path: polygon(50% 0%, 20% 60%, 0% 100%, 100% 100%, 80% 60%);    
     border: 2px solid #e6f0fa;
     border-radius: 100%;
