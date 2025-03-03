@@ -24,13 +24,24 @@ export default function Home() {
 }
 
 const ContainerCards = styled.div`
+  position: absolute;
+  top: 20%;
+  left: 28%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
   flex-wrap: wrap;
   z-index: 2;
+
+  @media (max-width: 1024px) {
+    position: relative;
+    top: 0;
+    left: 0;
+    
+  }
+
 `;

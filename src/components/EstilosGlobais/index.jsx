@@ -4,10 +4,12 @@ const EstilosGlobais = createGlobalStyle`
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  height: 100%; 
 }
 
 body {
   margin: 0;
+  padding: 0;
 }
 main {
   display: block;

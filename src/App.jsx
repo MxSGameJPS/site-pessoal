@@ -8,6 +8,7 @@ import SobreMim from "./pages/SobreMim";
 import Contato from "./pages/Contato";
 import SpaceBackground from "./components/Background/TelaAbertura";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<SpaceBackground><CardsAmostra /></SpaceBackground>} /> {/* Sem header */}
-        <Route path="/home" element={<><Header /><Home /></>} />
+        <Route path="/home" element={<><Header /><Home /><Footer /></>} />
         <Route path="/sobre-mim" element={<><Header /><SobreMim /></>} />
         <Route path="/projetos" element={<><Header /><Projetos /></>} />
         <Route path="/habilidades" element={<><Header /><Habilidades /></>} />

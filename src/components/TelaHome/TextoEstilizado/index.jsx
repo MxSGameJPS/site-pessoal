@@ -19,7 +19,7 @@ export default function TextoEstilizado() {
 const ContainerText = styled.div`
 display: flex;
 justify-content: center;
-margin-top: 5%;
+padding: 5%;
 `
 
 const StyledWrapper = styled.div`
