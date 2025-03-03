@@ -9,7 +9,7 @@ const CardProjetos = () => {
           <div className="container-log">
             <div className="log" />
             <div className="log-inside">
-              <img className="firs" src="/public/Ativo1.png" alt="logo" />
+              <img className="firs" src="/Ativo1.png" alt="logo" />
               <div className="first"></div>
               {/* <div className="second" /> */}
             </div>

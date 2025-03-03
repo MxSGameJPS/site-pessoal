@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Nave from "./nave.svg"; // Confirma que o caminho tá certo
+import Nave from "./nave.svg"; // Importa o SVG da mesma pasta
 
 const SpaceBackground = ({ children }) => {
   return (
@@ -17,7 +17,7 @@ const SpaceBackground = ({ children }) => {
       <div className="movingStar" />
       <div className="movingStar" />
       <div className="movingStar" />
-      {/* Nave */}
+      {/* Nave com SVG */}
       <div className="spaceship" />
       {children}
     </StyledSpace>
@@ -44,33 +44,28 @@ const StyledSpace = styled.div`
     width: 2px;
     height: 10px; /* Alongado pra parecer passando */
     background: #fff;
-    animation: flyBy 1s linear infinite;
+    animation: flyBy 1s linear infinite; /* Rápido pra alta velocidade */
   }
 
   .spaceship {
     position: absolute;
     bottom: 5%;
     left: 50%;
-    transform: translateX(-50%);
-    width: 500px; /* Ajuste pro tamanho da imagem */
-    height: 300px; /* Ajuste proporcional à imagem */
+    transform: translateX(-50%); /* Começa centralizado */
+    width: 500px; /* Ajusta pro tamanho da tua nave.svg */
+    height: 300px; /* Ajusta proporcional à imagem */
     max-width: 100%;
-    background: url(${Nave}); /* Usa o import como URL */
-    background-size: contain;
+    background-image: url(${Nave}); /* Usa o SVG como background */
+    background-size: contain; /* Mantém proporção */
     background-position: center;
     background-repeat: no-repeat;
-    /* Remove clip-path e bordas antigas */
-    /* clip-path: polygon(50% 0%, 50% 60%, 0% 100%, 100% 100%, 80% 60%); */
+    background-color: transparent; /* Garante que o fundo seja transparente */
+    /* Remove clip-path e gradiente antigos */
+    /* background: linear-gradient(90deg, #ffffff, #000000, #878f97, #878f97, #000000, #878f97, #878f97, #000000, #ffffff); */
+    /* clip-path: polygon(50% 0%, 20% 60%, 0% 100%, 100% 100%, 80% 60%); */
     /* border: 2px solid #e6f0fa; */
-    border-radius: 10px;
-    /* box-shadow: 0 0 20px rgba(255, 215, 0, 0.7); */
-    animation: enginePulse 0.5s infinite alternate;
-    svg {
-      width: 100%;
-      height: 100%;
-      /* Remove qualquer fundo preto do SVG */
-      background: transparent; /* Garante que o fundo seja transparente */
-    }
+    /* border-radius: 100%; */
+    animation: realisticMove 10s infinite ease-in-out; /* Animação realista */
   }
 
   /* Posições das estrelas fixas */
@@ -124,21 +119,30 @@ const StyledSpace = styled.div`
 
   @keyframes flyBy {
     0% {
-      transform: translateX(0) translateY(0);
+      transform: translateX(0) translateY(0); /* Começa na direita */
       opacity: 0.5;
     }
     100% {
-      transform: translateX(-100vw) translateY(90vh);
+      transform: translateX(-100vw) translateY(90vh); /* Vai pra esquerda e desce */
       opacity: 1;
     }
   }
 
-  @keyframes enginePulse {
+  @keyframes realisticMove {
     0% {
-      box-shadow: 0 0 20px rgba(0, 168, 232, 0.2);
+      transform: translateX(-50%) translateY(0); /* Começa centralizado */
+    }
+    25% {
+      transform: translateX(-60%) translateY(-10px); /* Desloca pra esquerda e sobe leve */
+    }
+    50% {
+      transform: translateX(-40%) translateY(10px); /* Volta pra direita e desce leve */
+    }
+    75% {
+      transform: translateX(-60%) translateY(-10px); /* Outro ciclo */
     }
     100% {
-      box-shadow: 0px 0px 150px rgba(0, 168, 232, 1);
+      transform: translateX(-50%) translateY(0); /* Volta ao centro */
     }
   }
 `;

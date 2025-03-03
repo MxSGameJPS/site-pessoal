@@ -4,19 +4,16 @@ import BackGroundHome from "../components/Background/TelaHome";
 import Terra from "../components/TelaHome/Cards";
 import CardProjetos from "../components/TelaHome/Cards/Cardprojetos";
 import styled from "styled-components";
-import CardSobre from "../components/TelaHome/Cards/CardSobre";
 
 export default function Home() {
   return (
     <BackGroundHome>
-      <TextoEstilizado/>
-      <Terra/>
-    <ContainerCards>
-      <CardProjetos/>
-      <CardSobre/>
-    </ContainerCards>
+      <TextoEstilizado />
+      <Terra />
+      <ContainerCards>
+        <CardProjetos />
+      </ContainerCards>
     </BackGroundHome>
-      
   );
 }
 
@@ -29,7 +26,4 @@ const ContainerCards = styled.div`
   padding: 0 2rem;
   flex-wrap: wrap;
   z-index: 2;
-`
-
-
-
+`;
