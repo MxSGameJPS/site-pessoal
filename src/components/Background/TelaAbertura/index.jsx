@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Nave from "./nave.svg"; // Confirma que o caminho tá certo
 
 const SpaceBackground = ({ children }) => {
   return (
@@ -43,7 +44,7 @@ const StyledSpace = styled.div`
     width: 2px;
     height: 10px; /* Alongado pra parecer passando */
     background: #fff;
-    animation: flyBy 1s linear infinite; /* Rápido pra alta velocidade */
+    animation: flyBy 1s linear infinite;
   }
 
   .spaceship {
@@ -51,15 +52,19 @@ const StyledSpace = styled.div`
     bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
-    width: 520px;
-    height: 180px;
-    /* background: #656b6d; */
-    background: linear-gradient(90deg, #ffffff, #000000, #878f97, #878f97, #000000, #878f97, #878f97, #000000, #ffffff);
-    clip-path: polygon(50% 0%, 20% 60%, 0% 100%, 100% 100%, 80% 60%);    
-    border: 2px solid #e6f0fa;
-    border-radius: 100%;
-    box-shadow: 110px 130px 390px rgba(24, 193, 223, 0.7);
-    animation: enginePulse 0.5s infinite alternate; /* Tremor da nave */
+    width: 500px; /* Ajuste pro tamanho da imagem */
+    height: 300px; /* Ajuste proporcional à imagem */
+    max-width: 100%;
+    background: url(${Nave}); /* Usa o import como URL */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Remove clip-path e bordas antigas */
+    clip-path: polygon(50% 0%, 50% 60%, 0% 100%, 100% 100%, 80% 60%);
+    /* border: 2px solid #e6f0fa; */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+    animation: enginePulse 0.5s infinite alternate;
   }
 
   /* Posições das estrelas fixas */
@@ -113,18 +118,18 @@ const StyledSpace = styled.div`
 
   @keyframes flyBy {
     0% {
-      transform: translateX(0) translateY(0); /* Começa na direita */
+      transform: translateX(0) translateY(0);
       opacity: 0.5;
     }
     100% {
-      transform: translateX(-100vw) translateY(90vh); /* Vai pra esquerda e desce */
+      transform: translateX(-100vw) translateY(90vh);
       opacity: 1;
     }
   }
 
   @keyframes enginePulse {
     0% {
-      box-shadow: 0px 0px 20px rgba(0, 168, 232, 0.2);
+      box-shadow: 0 0 20px rgba(0, 168, 232, 0.2);
     }
     100% {
       box-shadow: 50px 50px 150px rgba(0, 168, 232, 1);

@@ -14,14 +14,13 @@ function App() {
     <>
       <EstilosGlobais />
       <BrowserRouter>
-        <Header />
-        <Routes>
-        <Route path="/" element={<SpaceBackground><CardsAmostra /></SpaceBackground>} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/sobre-mim" element={<SobreMim />} />
-        <Route path="/projetos" element={<Projetos />} />
-        <Route path="/habilidades" element={<Habilidades />} />
-        <Route path="/contato" element={<Contato />} />
+      <Routes>
+        <Route path="/" element={<SpaceBackground><CardsAmostra /></SpaceBackground>} /> {/* Sem header */}
+        <Route path="/home" element={<><Header /><Home /></>} />
+        <Route path="/sobre-mim" element={<><Header /><SobreMim /></>} />
+        <Route path="/projetos" element={<><Header /><Projetos /></>} />
+        <Route path="/habilidades" element={<><Header /><Habilidades /></>} />
+        <Route path="/contato" element={<><Header /><Contato /></>} />
       </Routes>
       </BrowserRouter>
     </>
