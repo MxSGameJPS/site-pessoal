@@ -5,15 +5,15 @@ export default function TextoHome() {
     <ContainerTextoHome>
       <h1>Porque me escolher, para desenvolver seu projeto?</h1>
       <p>
-        No vasto universo digital, seu projeto merece uma órbita perfeita. Como
+        No vasto universo digital, seu projeto merece estar perfeito. Como
         um desenvolvedor Front-End apaixonado e um UI Designer com visão
-        cósmica, eu transformo ideias em sites que deslumbram e performam. Com
+        moderna, eu transformo ideias em sites que deslumbram e performam. Com
         expertise em criar interfaces intuitivas e código otimizado, garanto
         resultados que conquistam clientes e impulsionam seu sucesso online.
         Minha dedicação vai além do básico: eu entrego soluções personalizadas,
         com prazos cumpridos e um toque de inovação que faz a diferença. Vamos
-        juntos construir um site estelar que brilhe na internet? Entre em
-        contato e vamos decolar seu projeto hoje!
+        juntos construir um site incrível que brilhe na internet? Entre em
+        contato e vamos desenvolver seu projeto hoje!
       </p>
     </ContainerTextoHome>
   );
@@ -42,5 +42,9 @@ const ContainerTextoHome = styled.div`
   p {
     font-size: 1.2rem;
     margin: 1rem 0;
+  }
+
+  @media (max-width: 1024px) {
+    rotate: 0deg;
   }
 `;
