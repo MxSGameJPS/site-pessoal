@@ -7,6 +7,7 @@ import styled from "styled-components";
 import CardSobre from "../components/TelaHome/Cards/CardSobre";
 import CardHabilidades from "../components/TelaHome/Cards/CardSkills";
 import CardContato from "../components/TelaHome/Cards/CardContatos";
+import TextoHome from "../components/TelaHome/Texto";
 
 export default function Home() {
   return (
@@ -19,14 +20,15 @@ export default function Home() {
         <CardHabilidades/>
         <CardContato/>
       </ContainerCards>
+      <TextoHome/>
     </BackGroundHome>
   );
 }
 
 const ContainerCards = styled.div`
-  position: absolute;
+  /* position: absolute;
   top: 20%;
-  left: 28%;
+  left: 28%; */
   display: flex;
   justify-content: center;
   align-items: center;
