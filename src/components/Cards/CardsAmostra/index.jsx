@@ -26,12 +26,12 @@ const CardWrapper = styled.div`
   opacity: 0;
 
   &.active {
-    opacity: 1;
+    opacity: 0;
   }
 
   @keyframes flyThrough {
     0% {
-      transform: translate(-50%, -50%) scale(0.1);
+      transform: translate(-50%, -50%) scale(0);
       opacity: 0;
     }
     50% {
@@ -51,7 +51,7 @@ const Flash = styled.div`
   height: 100vh;
   background: #ffffff;
   opacity: 0;
-  animation: solarFlash 2s linear forwards;
+  animation: solarFlash 1s linear forwards;
   pointer-events: none;
 
   @keyframes solarFlash {
@@ -90,12 +90,12 @@ export default function CardAmostra() {
             setShowFlash(true);
             setTimeout(() => {
               navigate("/home");
-            }, 2000);
-          }, 5000);
+            }, 1000);
+          }, 2000);
           return prev;
         }
       });
-    }, 5000);
+    }, 2000);
     return () => clearInterval(cardInterval);
   }, [cards.length, navigate]);
 
