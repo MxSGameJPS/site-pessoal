@@ -58,7 +58,7 @@ const ContainerIcon = styled.div`
 export default function Header() {
   return (
     <Nav>
-        <Logo className="logo" src="/public/Ativo1.png" alt="Logo site" />
+      <Logo className="logo" src="/Ativo1.png" alt="Logo site" />
       <ContainerHeader>
         <TextoDestaque />
       </ContainerHeader>
@@ -72,4 +72,4 @@ export default function Header() {
 const Logo = styled.img`
   width: 50px;
   height: 50px;
-`
+`;

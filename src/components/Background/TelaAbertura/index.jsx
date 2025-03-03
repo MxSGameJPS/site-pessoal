@@ -60,11 +60,17 @@ const StyledSpace = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     /* Remove clip-path e bordas antigas */
-    clip-path: polygon(50% 0%, 50% 60%, 0% 100%, 100% 100%, 80% 60%);
+    /* clip-path: polygon(50% 0%, 50% 60%, 0% 100%, 100% 100%, 80% 60%); */
     /* border: 2px solid #e6f0fa; */
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+    /* box-shadow: 0 0 20px rgba(255, 215, 0, 0.7); */
     animation: enginePulse 0.5s infinite alternate;
+    svg {
+      width: 100%;
+      height: 100%;
+      /* Remove qualquer fundo preto do SVG */
+      background: transparent; /* Garante que o fundo seja transparente */
+    }
   }
 
   /* Posições das estrelas fixas */
@@ -132,7 +138,7 @@ const StyledSpace = styled.div`
       box-shadow: 0 0 20px rgba(0, 168, 232, 0.2);
     }
     100% {
-      box-shadow: 50px 50px 150px rgba(0, 168, 232, 1);
+      box-shadow: 0px 0px 150px rgba(0, 168, 232, 1);
     }
   }
 `;
