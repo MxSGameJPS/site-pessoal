@@ -29,7 +29,7 @@ const ContainerTextoHome = styled.div`
   max-width: 800px;
   padding: 2rem;
   background: linear-gradient(45deg, #051635, #7397d8, #9cb0d6);
-  border-radius: 10rem 0;
+  border-radius: 8rem 0;
   transform-box: fill-box;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
   rotate: 3deg;
