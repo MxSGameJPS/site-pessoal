@@ -5,7 +5,7 @@ export default function BackGroundHome({ children }) { // Adiciona children como
 }
 
 const BackGround = styled.section`
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: linear-gradient(45deg, #022057, #23498f, #819ed3);
   overflow: hidden;

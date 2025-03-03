@@ -1,26 +1,23 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-const CardProjetos = () => {
+const CardSobre = () => {
   return (
     <StyledWrapper>
       <div className="card">
         <div className="card__date">
-          <span className="date">Projetos</span>
-          <span className="time">2025</span>
+          <span className="time">Sobre</span>
+          <span className="date"> Mim</span>
         </div>
         <div className="popup">
-          <p className="title">Página de Projetos</p>
-          <p>
-            Aqui você pode os projetos que tenho trabalhado, e analisar meu
-            código e designer
-          </p>
+          <p className="title">Que tal me conhecer?</p>
+          <p>Para poder me entregar o futuro da sua empresa na internet, você precisa me conhecer melhor.</p>
           <button className="btn-primary">Clique aqui</button>
         </div>
       </div>
     </StyledWrapper>
   );
-};
+}
 
 const StyledWrapper = styled.div`
   .card {
@@ -123,11 +120,11 @@ const StyledWrapper = styled.div`
   }
 
   .popup {
-    background-color: #706c30;
+    background-color: #793636;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    font-size: 0.8em;
+    font-size: .8em;
     padding: 3px;
 
     @media (max-width: 480px) {
@@ -154,19 +151,17 @@ const StyledWrapper = styled.div`
     }
   }
 
-  .card__date,
-  .popup {
+  .card__date , .popup {
     opacity: 0;
-    transition: all 0.5s ease;
+    transition: all .5s ease;
   }
 
   .card:hover {
     transform: scale(1.2);
-    box-shadow: 0px 0px 10px 10px #289fed;
+    box-shadow: 0px 0px 10px 10px #289FED;
   }
 
-  .card:hover .card__date,
-  .card:hover .popup {
+  .card:hover .card__date , .card:hover .popup {
     opacity: 1;
 
     @media (max-width: 768px) {
@@ -180,7 +175,6 @@ const StyledWrapper = styled.div`
         opacity: 1;
       }
     }
-  }
-`;
+  }`;
 
-export default CardProjetos;
+export default CardSobre;
