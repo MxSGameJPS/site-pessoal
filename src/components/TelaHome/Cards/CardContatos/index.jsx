@@ -31,7 +31,9 @@ const StyledWrapper = styled.div`
   .card {
     width: 164px;
     height: 276px;
-    background: rgb(0, 0, 0);
+    background: url("/fundocontato.png");
+    background-size: cover;
+    background-position: center;
     border: 3px solid rgb(17, 4, 94);
     border-radius: 15px;
     position: relative;
@@ -56,6 +58,13 @@ const StyledWrapper = styled.div`
       padding: 4px; /* Ajuste de padding */
       gap: 18px; /* Ajuste de gap */
     }
+
+    &:hover {
+      background: #000000; /* Substitui a imagem por fundo preto no hover */
+      .card__date,
+      .popup {
+        opacity: 1; /* Garante que aparecem */
+      }
   }
 
   .btn-primary {
