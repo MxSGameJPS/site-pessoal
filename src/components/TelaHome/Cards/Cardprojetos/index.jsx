@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 import styled from "styled-components";
 
 const CardProjetos = () => {
@@ -15,7 +16,9 @@ const CardProjetos = () => {
             Aqui você pode os projetos que tenho trabalhado, e analisar meu
             código e designer
           </p>
-          <button className="btn-primary">Clique aqui</button>
+          <button className="btn-primary">
+          <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/projetos">Clique aqui</Link>
+          </button>
         </div>
       </div>
     </StyledWrapper>
@@ -59,6 +62,11 @@ const StyledWrapper = styled.div`
     border-radius: 5px;
     padding: 3px;
     cursor: pointer;
+
+    a {
+      text-decoration: none;
+      color: #000;
+    }
 
     @media (max-width: 480px) {
       padding: 2px;

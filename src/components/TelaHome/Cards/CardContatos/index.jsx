@@ -1,5 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import { Link } from "react-router";
+import styled from "styled-components";
 
 const CardContato = () => {
   return (
@@ -12,12 +13,19 @@ const CardContato = () => {
         <div className="popup">
           <p className="title">Vamos criar algo incrível!</p>
           <p>Vamos trabalhar juntos e criar algo incrível</p>
-          <button className="btn-primary">Entrar em contato</button>
+          <button className="btn-primary">
+            <Link
+              style={{ textDecoration: "none", color: "inherit" }}
+              to="/contato"
+            >
+              Entrar em contato
+            </Link>
+          </button>
         </div>
       </div>
     </StyledWrapper>
   );
-}
+};
 
 const StyledWrapper = styled.div`
   .card {
@@ -124,7 +132,7 @@ const StyledWrapper = styled.div`
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    font-size: .8em;
+    font-size: 0.8em;
     padding: 3px;
 
     @media (max-width: 480px) {
@@ -151,17 +159,19 @@ const StyledWrapper = styled.div`
     }
   }
 
-  .card__date , .popup {
+  .card__date,
+  .popup {
     opacity: 0;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
   }
 
   .card:hover {
     transform: scale(1.2);
-    box-shadow: 0px 0px 10px 10px #289FED;
+    box-shadow: 0px 0px 10px 10px #289fed;
   }
 
-  .card:hover .card__date , .card:hover .popup {
+  .card:hover .card__date,
+  .card:hover .popup {
     opacity: 1;
 
     @media (max-width: 768px) {
@@ -175,6 +185,7 @@ const StyledWrapper = styled.div`
         opacity: 1;
       }
     }
-  }`;
+  }
+`;
 
 export default CardContato;

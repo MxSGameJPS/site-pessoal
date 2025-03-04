@@ -1,5 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import { Link } from "react-router";
+import styled from "styled-components";
 
 const CardSobre = () => {
   return (
@@ -11,13 +12,18 @@ const CardSobre = () => {
         </div>
         <div className="popup">
           <p className="title">Que tal me conhecer?</p>
-          <p>Para poder me entregar o futuro da sua empresa na internet, você precisa me conhecer melhor.</p>
-          <button className="btn-primary">Clique aqui</button>
+          <p>
+            Para poder me entregar o futuro da sua empresa na internet, você
+            precisa me conhecer melhor.
+          </p>
+          <button className="btn-primary">
+            <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/sobre-mim">Clique aqui</Link>
+          </button>
         </div>
       </div>
     </StyledWrapper>
   );
-}
+};
 
 const StyledWrapper = styled.div`
   .card {
@@ -56,6 +62,11 @@ const StyledWrapper = styled.div`
     border-radius: 5px;
     padding: 3px;
     cursor: pointer;
+
+    Link {
+      text-decoration: none;
+      color: black;
+    }
 
     @media (max-width: 480px) {
       padding: 2px;
@@ -124,7 +135,7 @@ const StyledWrapper = styled.div`
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    font-size: .8em;
+    font-size: 0.8em;
     padding: 3px;
 
     @media (max-width: 480px) {
@@ -151,17 +162,19 @@ const StyledWrapper = styled.div`
     }
   }
 
-  .card__date , .popup {
+  .card__date,
+  .popup {
     opacity: 0;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
   }
 
   .card:hover {
     transform: scale(1.2);
-    box-shadow: 0px 0px 10px 10px #289FED;
+    box-shadow: 0px 0px 10px 10px #289fed;
   }
 
-  .card:hover .card__date , .card:hover .popup {
+  .card:hover .card__date,
+  .card:hover .popup {
     opacity: 1;
 
     @media (max-width: 768px) {
@@ -175,6 +188,7 @@ const StyledWrapper = styled.div`
         opacity: 1;
       }
     }
-  }`;
+  }
+`;
 
 export default CardSobre;
