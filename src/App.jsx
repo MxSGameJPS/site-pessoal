@@ -20,7 +20,7 @@ function App() {
         <Route path="/home" element={<><Header /><Home /><Footer /></>} />
         <Route path="/sobre-mim" element={<><Header /><SobreMim /><Footer /></>} />
         <Route path="/projetos" element={<><Header /><Projetos /><Footer /></>} />
-        <Route path="/habilidades" element={<><Header /><Habilidades /></>} />
+        <Route path="/habilidades" element={<><Header /><Habilidades /><Footer /></>} />
         <Route path="/contato" element={<><Header /><Contato /></>} />
       </Routes>
       </BrowserRouter>
