@@ -1,0 +1,123 @@
+{
+  "projects": [
+    {
+      "name": "Site Pessoal",
+      "url": "https://site-pessoal-ashy.vercel.app",
+      "imageUrl": "/Imagens/site-pessoal.png",
+      "description": "Portfólio pessoal com design estelar e funcionalidades Front-End.",
+      "deployDate": "2025-03-01",
+      "tecnologia": "React",
+      "status": "Deployed"
+    },
+    {
+      "name": "Space App",
+      "url": "https://space-app-theta-gules.vercel.app",
+      "imageUrl": "/Imagens/space-app.png",
+      "description": "Aplicação temática espacial com foco em design e animações.",
+      "deployDate": "2025-02-25",
+      "tecnologia": "React",
+      "status": "Deployed"
+    },
+    {
+      "name": "MXS Marketing",
+      "url": "https://www.mxsmarketing.digital",
+      "imageUrl": "/Imagens/portifolio.png",
+      "description": "Site de marketing com interface profissional.",
+      "deployDate": "2025-02-20",
+      "tecnologia": "Next.js",
+      "status": "Deployed"
+    },
+    {
+      "name": "Consulta CEP",
+      "url": "https://consulta-cep-mocha.vercel.app",
+      "imageUrl": "/Imagens/consulta-cep.png",
+      "description": "Ferramenta de consulta de CEP com API integrada.",
+      "deployDate": "2025-02-18",
+      "tecnologia": "React",
+      "status": "Deployed"
+    },
+    {
+      "name": "Portfólio 2025",
+      "url": "https://portifolio-2025-lime.vercel.app",
+      "imageUrl": "/Imagens/portifolio2.png",
+      "description": "Portfólio atualizado para 2025 com design moderno.",
+      "deployDate": "2025-03-02",
+      "tecnologia": "React",
+      "status": "Deployed"
+    },
+    {
+      "name": "Video Flow",
+      "url": "https://video-flow-sigma.vercel.app",
+      "imageUrl": "/Imagens/video-flow.png",
+      "description": "Plataforma de streaming ou gerenciamento de vídeos.",
+      "deployDate": "2025-02-22",
+      "tecnologia": "JavaScript e JSON para API",
+      "status": "Deployed"
+    },
+    {
+      "name": "Formulário Abertura de Conta",
+      "url": "https://formulario-abertura-de-conta.vercel.app",
+      "imageUrl": "/Imagens/abertura-conta.png",
+      "description": "Formulário interativo para abertura de contas.",
+      "deployDate": "2025-02-15",
+      "tecnologia": "JavaScript",
+      "status": "Deployed"
+    },
+    {
+      "name": "Fokus App",
+      "url": "https://fokus-blond-tau.vercel.app",
+      "imageUrl": "/Imagens/fokus.png",
+      "description": "Aplicação de foco e produtividade.",
+      "deployDate": "2025-02-10",
+      "tecnologia": "JavaScript",
+      "status": "Deployed"
+    },
+    {
+      "name": "Alura Books",
+      "url": "https://alurabooks-iota-red.vercel.app",
+      "imageUrl": "/Imagens/alurabook.png",
+      "description": "Loja virtual de livros inspirada na Alura.",
+      "deployDate": "2025-02-12",
+      "tecnologia": "JavaScript e JSON para API",
+      "status": "Deployed"
+    },
+    {
+      "name": "Lista de Compras Mobile",
+      "url": "https://lista-de-compras-mobile.vercel.app",
+      "imageUrl": "/Imagens/lista-compra.png",
+      "description": "Aplicativo mobile para gerenciamento de listas de compras.",
+      "deployDate": "2025-02-05",
+      "tecnologia": "JavaScript",
+      "status": "Deployed"
+    },
+    {
+      "name": "Jogo Número Secreto",
+      "url": "https://jogo-numero-secreto-theta-jet.vercel.app",
+      "imageUrl": "/Imagens/numero-secreto.png",
+      "description": "Jogo interativo de adivinhação de números.",
+      "deployDate": "2025-01-30",
+      "tecnologia": "JavaScript",
+      "status": "Deployed"
+    },
+    {
+      "name": "Link na Bio",
+      "url": "https://link-na-bio-seven.vercel.app",
+      "imageUrl": "/Imagens/link-bio.png",
+      "description": "Página de links personalizada para redes sociais.",
+      "deployDate": "2025-02-08",
+      "tecnologia": "HTML e CSS",
+      "status": "Deployed"
+    },
+    {
+      "name": "Portfólio Snowy",
+      "url": "https://portifolio-snowy-one-92.vercel.app",
+      "imageUrl": "/Imagens/portifoliohtml.png",
+      "description": "Portfólio com tema invernal e design elegante.",
+      "deployDate": "2025-03-03",
+      "tecnologia": "HTML e CSS",
+      "status": "Deployed"
+    }
+  ],
+  "totalProjects": 14,
+  "lastUpdated": "2025-03-04T07:45:00-08:00"
+}
