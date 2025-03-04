@@ -31,7 +31,7 @@ const StyledWrapper = styled.div`
   .card {
     width: 164px;
     height: 276px;
-    background: url('/fundoskills.png');
+    background: url("/fundoskills.png");
     background-size: cover;
     background-position: center;
     border: 3px solid rgb(17, 4, 94);
@@ -65,6 +65,7 @@ const StyledWrapper = styled.div`
       .popup {
         opacity: 1; /* Garante que aparecem */
       }
+    }
   }
 
   .btn-primary {
@@ -91,10 +92,9 @@ const StyledWrapper = styled.div`
     height: 10px;
     position: absolute;
     bottom: 10px;
-    right: 77px;
+    right: 85px;
     border-radius: 50%;
     background-color: rgb(17, 4, 94);
-    
 
     @media (max-width: 480px) {
       width: 8px;

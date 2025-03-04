@@ -17,7 +17,12 @@ const CardProjetos = () => {
             código e designer
           </p>
           <button className="btn-primary">
-          <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/projetos">Clique aqui</Link>
+            <Link
+              style={{ textDecoration: "none", color: "inherit" }}
+              to="/projetos"
+            >
+              Clique aqui
+            </Link>
           </button>
         </div>
       </div>
@@ -56,13 +61,14 @@ const StyledWrapper = styled.div`
       padding: 4px; /* Ajuste de padding */
       gap: 18px; /* Ajuste de gap */
     }
-    
+
     &:hover {
       background: #000000; /* Substitui a imagem por fundo preto no hover */
       .card__date,
       .popup {
         opacity: 1; /* Garante que aparecem */
       }
+    }
   }
 
   .btn-primary {
@@ -94,7 +100,7 @@ const StyledWrapper = styled.div`
     height: 10px;
     position: absolute;
     bottom: 10px;
-    right: 77px;
+    right: 80px;
     border-radius: 50%;
     background-color: rgb(17, 4, 94);
 
