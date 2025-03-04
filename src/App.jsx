@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<SpaceBackground><CardsAmostra /></SpaceBackground>} /> {/* Sem header */}
         <Route path="/home" element={<><Header /><Home /><Footer /></>} />
-        <Route path="/sobre-mim" element={<><Header /><SobreMim /></>} />
+        <Route path="/sobre-mim" element={<><Header /><SobreMim /><Footer /></>} />
         <Route path="/projetos" element={<><Header /><Projetos /></>} />
         <Route path="/habilidades" element={<><Header /><Habilidades /></>} />
         <Route path="/contato" element={<><Header /><Contato /></>} />
