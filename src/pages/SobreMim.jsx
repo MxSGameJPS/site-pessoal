@@ -67,6 +67,21 @@ const ContainerSobreMim = styled.div`
     left: 50;
     
   }
+
+  @media (max-width: 1024px) {
+  p {
+    position: relative;
+    top: 0px;
+    left: 0;
+    font-size: 18px;
+    margin: 10px 15px;
+    padding: 15px;
+    /* bottom: 10em; */
+    max-width: 800px;
+    left: 5%;
+    transform: translateX(-5%);
+  }
+}
 `;
 
 
