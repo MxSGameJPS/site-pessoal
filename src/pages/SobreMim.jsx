@@ -7,7 +7,7 @@ export default function SobreMim() {
   return (
       <BackGroundSobreMim>
         <TituloSobreMim />
-        <Terra size="700px" top="10%" left="5%"/>
+        <Terra $size="700px" $top="10%" $left="5%"/>
       <ContainerSobreMim>        
         <p>
           Prepare-se para uma jornada estelar! Eu sou Saulo Pavanello, um

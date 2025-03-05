@@ -4,11 +4,14 @@ import styled from "styled-components";
 import ButtonGitHub from "../components/TelaContato/TagsSociais/GitHub";
 import ButtonInstagram from "../components/TelaContato/TagsSociais/Instagram";
 import ButtonWhatsApp from "../components/TelaContato/TagsSociais/WhatsApp/Index";
+import Terra from "../components/TelaHome/Cards";
 
 export default function Contato() {
   return (
     <ContatoSection>
-      <h1>Contato</h1>
+      <h1>Vamos criar algo incrível!</h1>
+      <Terra />
+      <h2>Entre em contato comigo</h2>      
       <ContactForm/>
     <ContainerSociais>
       <ButtonLinhedin/>
