@@ -75,9 +75,10 @@ const StyledForm = styled.form`
   }
 
   @media (max-width: 1024px) {
-    padding: 15px;
+    padding: 25px 10px;
     gap: 12px;
     max-width: 400px;
+    
 
     label {
       font-size: 14px;
