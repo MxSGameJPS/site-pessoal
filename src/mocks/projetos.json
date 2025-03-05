@@ -2,7 +2,7 @@
   "projects": [
     {
       "name": "Site Pessoal",
-      "url": "https://site-pessoal-ashy.vercel.app",
+      "url": "www.mxsmarketing.digital",
       "imageUrl": "/Imagens/site-pessoal.png",
       "description": "Portfólio pessoal com design estelar e funcionalidades Front-End.",
       "deployDate": "2025-03-01",
@@ -20,7 +20,7 @@
     },
     {
       "name": "MXS Marketing",
-      "url": "https://www.mxsmarketing.digital",
+      "url": "https://site-pessoal-ashy.vercel.app",
       "imageUrl": "/Imagens/portifolio.png",
       "description": "Site de marketing com interface profissional.",
       "deployDate": "2025-02-20",
