@@ -138,7 +138,7 @@ export default function Habilidades() {
         ))}
       </ContainerCardsSkills>
         <Div>
-          <h2> Ferramentas de Desenvolvimento </h2>
+          <h3> Ferramentas de Desenvolvimento </h3>
         </Div>
         <ContainerCardsSkills>
         {habilidadesDesign.map((habilidade, index) => (
