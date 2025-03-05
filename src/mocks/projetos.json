@@ -2,7 +2,7 @@
   "projects": [
     {
       "name": "Site Pessoal",
-      "url": "www.mxsmarketing.digital",
+      "url": "https://www.mxsmarketing.digital",
       "imageUrl": "/Imagens/site-pessoal.png",
       "description": "Portfólio pessoal com design estelar e funcionalidades Front-End.",
       "deployDate": "2025-03-01",
