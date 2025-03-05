@@ -99,6 +99,22 @@ const StyledForm = styled.form`
   @media (max-width: 768px) {
     max-width: 350px;
   }
+
+  @media (max-width: 480px) {
+    max-width: 300px;
+  }
+
+  @media (max-width: 360px) {
+    max-width: 280px;
+  }
+
+  @media (max-width: 320px) {
+    max-width: 250px;
+  }
+
+  @media (max-width: 300px) {
+    max-width: 200px;
+  }
 `;
 
 const StyledSuccess = styled.p`
