@@ -34,7 +34,7 @@ const StyledWrapper = styled.div`
     background: url("/fundocontato.png");
     background-size: cover;
     background-position: center;
-    border: 3px solid rgb(17, 4, 94);
+    border: 3px solid rgb(20, 20, 20);
     border-radius: 15px;
     position: relative;
     padding: 5px;
