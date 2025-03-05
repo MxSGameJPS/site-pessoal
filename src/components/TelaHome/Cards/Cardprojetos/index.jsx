@@ -13,7 +13,7 @@ const CardProjetos = () => {
         <div className="popup">
           <p className="title">Página de Projetos</p>
           <p>
-            Aqui você pode os projetos que tenho trabalhado, e analisar meu
+            Aqui você pode ver os projetos que tenho trabalhado, e analisar meu
             código e designer
           </p>
           <button className="btn-primary">

@@ -95,6 +95,10 @@ const StyledForm = styled.form`
       font-size: 14px;
     }
   }
+
+  @media (max-width: 768px) {
+    max-width: 350px;
+  }
 `;
 
 const StyledSuccess = styled.p`
