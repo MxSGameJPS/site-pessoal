@@ -11,39 +11,46 @@ import TextoHome from "../components/TelaHome/Texto";
 
 export default function Home() {
   return (
-    <BackGroundHome>
-      <TextoEstilizado />
-      <Terra />
-      <ContainerCards>
-        <CardProjetos />
-        <CardSobre/>
-        <CardHabilidades/>
-        <CardContato/>
-      </ContainerCards>
-      <TextoHome/>
-    </BackGroundHome>
+    <HomeContainer>
+      <BackGroundHome>
+        <TextoEstilizado />
+        <Terra />
+        <ContainerCards>
+          <CardProjetos />
+          <CardSobre />
+          <CardHabilidades />
+          <CardContato />
+        </ContainerCards>
+        <TextoHome />
+      </BackGroundHome>
+    </HomeContainer>
   );
 }
 
+const HomeContainer = styled.div`
+  max-width: 100%;
+  overflow-x: hidden;
+`;
+
 const ContainerCards = styled.div`
-  /* position: absolute;
-  top: 20%;
-  left: 28%; */
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  /* padding: 0 1rem; */
+  margin: 3rem auto;
+  padding: 0 1.5rem;
   flex-wrap: wrap;
   z-index: 2;
+  max-width: 1200px;
 
-  @media (max-width: 1024px) {
-    position: relative;
-    top: 0;
-    left: 0;
-    
+  @media (max-width: 768px) {
+    gap: 1.5rem;
+    margin: 2rem auto;
   }
 
+  @media (max-width: 480px) {
+    gap: 1rem;
+    margin: 1.5rem auto;
+    justify-content: center;
+  }
 `;

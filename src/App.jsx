@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CardsAmostra from "./components/Cards/CardsAmostra";
 import EstilosGlobais from "./components/EstilosGlobais";
 import Home from "./pages/Home";
@@ -15,14 +15,67 @@ function App() {
     <>
       <EstilosGlobais />
       <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<SpaceBackground><CardsAmostra /></SpaceBackground>} /> {/* Sem header */}
-        <Route path="/home" element={<><Header /><Home /><Footer /></>} />
-        <Route path="/sobre-mim" element={<><Header /><SobreMim /><Footer /></>} />
-        <Route path="/projetos" element={<><Header /><Projetos /><Footer /></>} />
-        <Route path="/habilidades" element={<><Header /><Habilidades /><Footer /></>} />
-        <Route path="/contato" element={<><Header /><Contato /><Footer /></>} />
-      </Routes>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <SpaceBackground>
+                <CardsAmostra />
+              </SpaceBackground>
+            }
+          />{" "}
+          {/* Sem header */}
+          <Route
+            path="/home"
+            element={
+              <>
+                <Header />
+                <Home />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/sobre-mim"
+            element={
+              <>
+                <Header />
+                <SobreMim />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/projetos"
+            element={
+              <>
+                <Header />
+                <Projetos />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/habilidades"
+            element={
+              <>
+                <Header />
+                <Habilidades />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/contato"
+            element={
+              <>
+                <Header />
+                <Contato />
+                <Footer />
+              </>
+            }
+          />
+        </Routes>
       </BrowserRouter>
     </>
   );

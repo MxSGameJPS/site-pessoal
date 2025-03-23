@@ -5,29 +5,34 @@ import { BsPersonBadge } from "react-icons/bs";
 import { IoFileTrayStacked } from "react-icons/io5";
 import { GiSkills } from "react-icons/gi";
 import { BiSolidContact } from "react-icons/bi";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 const headerBtnIcons = [
-  { icon: TiHomeOutline, route: "home" },
-  { icon: BsPersonBadge, route: "sobre-mim" },
-  { icon: IoFileTrayStacked, route: "projetos" },
-  { icon: GiSkills, route: "habilidades" },
-  { icon: BiSolidContact, route: "contato" },
+  { icon: TiHomeOutline, route: "home", label: "Home" },
+  { icon: BsPersonBadge, route: "sobre-mim", label: "Sobre Mim" },
+  { icon: IoFileTrayStacked, route: "projetos", label: "Projetos" },
+  { icon: GiSkills, route: "habilidades", label: "Habilidades" },
+  { icon: BiSolidContact, route: "contato", label: "Contato" },
 ];
 
-const ButtonHeader = () => {
+const NavigationButtons = () => {
   return (
     <StyledWrapper>
       {headerBtnIcons.map((button) => {
         const IconComponent = button.icon;
         return (
-            <Link to={`/${button.route}`} key={button.route}>
-                <button className="Btn">
-                <span className="svgContainer">
-                    <IconComponent />
-                </span>
-                </button>
-            </Link>
+          <Link
+            to={`/${button.route}`}
+            key={button.route}
+            aria-label={button.label}
+          >
+            <button className="Btn">
+              <span className="svgContainer">
+                <IconComponent />
+                <span className="buttonText">{button.label}</span>
+              </span>
+            </button>
+          </Link>
         );
       })}
     </StyledWrapper>
@@ -38,8 +43,14 @@ const StyledWrapper = styled.div`
   display: flex;
   gap: 10px;
 
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .Btn {
-    width: 45px;
+    width: auto;
+    min-width: 45px;
     height: 45px;
     display: flex;
     flex-direction: row;
@@ -48,7 +59,6 @@ const StyledWrapper = styled.div`
     border: none;
     background-color: transparent;
     position: relative;
-    /* overflow: hidden; */
     border-radius: 7px;
     cursor: pointer;
     transition: all 0.3s;
@@ -59,20 +69,19 @@ const StyledWrapper = styled.div`
       position: absolute;
       width: 100%;
       height: 100%;
-      background: transparent; /* Fundo escuro */
+      background: transparent;
       z-index: -1;
       border-radius: 7px;
       transition: all 0.3s;
     }
 
     &:hover {
-      transform: rotate(25deg); /* Gira o fundo */
-      transform-origin: bottom;
+      transform: translateY(-5px);
     }
 
     &:hover .svgContainer {
-      background-color: rgba(0, 0, 0, 0.466); /* Cinza translúcido */
-      backdrop-filter: blur(4px); /* Blur no hover */
+      background-color: rgba(0, 0, 0, 0.466);
+      backdrop-filter: blur(4px);
     }
   }
 
@@ -88,29 +97,17 @@ const StyledWrapper = styled.div`
     border-radius: 10px;
     transition: all 0.3s;
     border: 1px solid rgba(156, 156, 156, 0.466);
+    padding: 0 12px;
+    gap: 8px;
   }
 
-  /* .BG {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: #181818;
-    z-index: -1;
-    border-radius: 10px;
-    pointer-events: none;
-    transition: all .3s;
-  }
+  .buttonText {
+    display: none;
 
-  .Btn:hover .BG {
-    transform: rotate(35deg);
-    transform-origin: bottom;
+    @media (min-width: 768px) {
+      display: inline;
+    }
   }
-
-  .Btn:hover .svgContainer {
-    background-color: rgba(156, 156, 156, 0.466);
-    backdrop-filter: blur(4px);
-  } */
 `;
 
-export default ButtonHeader;
+export default NavigationButtons;

@@ -8,19 +8,24 @@ const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 1em 2em;
-  background: linear-gradient(45deg, #051635, #7397d8, #9cb0d6);
-  color: #fff;
-  gap: 20px;
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color),
+    var(--tertiary-color)
+  );
+  color: var(--text-light);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--box-shadow);
+  backdrop-filter: blur(5px);
 
-  @media (max-width: 1024px) {
-    flex-direction: column; /* Muda pra vertical */
-    justify-content: center; /* Centraliza tudo */
-    padding: 1em; /* Reduz padding pra caber melhor */
-    gap: 10px; /* Menor espaço entre elementos */
-
-    .logo {
-      display: none;
-    }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.8em 0.5em;
+    gap: 12px;
   }
 `;
 
@@ -29,36 +34,61 @@ const ContainerHeader = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  max-width: 100%;
-  margin-left: 200px;
+  flex: 1;
 
-  @media (max-width: 1024px) {
-    margin-left: 0; /* Remove margem em mobile */
-    width: 100%; /* Ajusta largura pra não ocupar tudo */
+  @media (max-width: 768px) {
+    margin: 0;
+    width: 100%;
+    order: 2;
   }
 `;
 
 const ContainerIcon = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 200px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: center;
+    order: 3;
+  }
+`;
+
+const LogoContainer = styled.div`
+  display: flex;
   align-items: center;
 
-  @media (max-width: 1024px) {
-    flex-direction: row;
-    gap: 30px;
-    svg {
-      /* Alvo os ícones dentro do div */
-      font-size: 1.5em; /* Reduz tamanho dos ícones (ajusta como quiser) */
-    }
+  @media (max-width: 768px) {
+    order: 1;
+    margin-bottom: 5px;
+  }
+`;
+
+const Logo = styled.img`
+  width: 54px;
+  height: 54px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05) rotate(5deg);
+  }
+
+  @media (max-width: 768px) {
+    width: 46px;
+    height: 46px;
   }
 `;
 
 export default function Header() {
   return (
     <Nav>
-      <Logo className="logo" src="/Ativo1.png" alt="Logo site" />
+      <LogoContainer>
+        <Logo src="/Ativo1.png" alt="Logo site" />
+      </LogoContainer>
       <ContainerHeader>
         <TextoDestaque />
       </ContainerHeader>
@@ -68,8 +98,3 @@ export default function Header() {
     </Nav>
   );
 }
-
-const Logo = styled.img`
-  width: 50px;
-  height: 50px;
-`;

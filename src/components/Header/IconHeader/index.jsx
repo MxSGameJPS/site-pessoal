@@ -5,7 +5,7 @@
 // import { BiSolidContact } from "react-icons/bi";
 import styled from "styled-components";
 // import { Link } from "react-router";
-import ButtonHeader from "./teste";
+import NavigationButtons from "./NavigationButtons";
 
 // const HeaderIcon = [
 //   { icon: TiHomeOutline, title: "Home" },
@@ -17,9 +17,9 @@ import ButtonHeader from "./teste";
 export default function HeaderIcons() {
   return (
     <ContainerIcons>
-        <ButtonHeader/>
+      <NavigationButtons />
     </ContainerIcons>
-  )
+  );
 }
 
 const ContainerIcons = styled.div`

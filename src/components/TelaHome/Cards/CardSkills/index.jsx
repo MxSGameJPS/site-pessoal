@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const CardHabilidades = () => {
@@ -12,7 +12,7 @@ const CardHabilidades = () => {
         </div>
         <div className="popup">
           <p className="title">Minhas habilidades</p>
-          <p>No âmbito profissional estamos em constante aprendizado</p>
+          <p>Tecnologias e ferramentas que domino</p>
           <button className="btn-primary">
             <Link
               style={{ textDecoration: "none", color: "inherit" }}
@@ -28,6 +28,9 @@ const CardHabilidades = () => {
 };
 
 const StyledWrapper = styled.div`
+  position: relative;
+  z-index: 1;
+
   .card {
     width: 164px;
     height: 276px;
@@ -41,48 +44,72 @@ const StyledWrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 22px;
-    transition: all 1s ease;
+    transition: all 0.4s ease;
     color: antiquewhite;
+    overflow: hidden;
 
     @media (max-width: 480px) {
-      width: 120px; /* Reduz largura */
-      height: 200px; /* Reduz altura */
-      padding: 3px; /* Reduz padding */
-      gap: 15px; /* Reduz gap */
+      width: 120px;
+      height: 200px;
+      padding: 3px;
+      gap: 15px;
     }
 
-    /* Para tablets */
     @media (max-width: 768px) {
-      width: 140px; /* Ajuste intermediário */
-      height: 240px; /* Ajuste intermediário */
-      padding: 4px; /* Ajuste de padding */
-      gap: 18px; /* Ajuste de gap */
+      width: 140px;
+      height: 240px;
+      padding: 4px;
+      gap: 18px;
     }
 
     &:hover {
-      background: #000000; /* Substitui a imagem por fundo preto no hover */
+      background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)),
+        url("/fundoskills.png");
+      background-size: cover;
+      background-position: center;
       .card__date,
       .popup {
-        opacity: 1; /* Garante que aparecem */
+        opacity: 1;
       }
     }
   }
 
   .btn-primary {
-    background-color: #9cbde2;
-    border: 1px solid #9cbde2;
+    background-color: #2b8a41;
+    border: none;
     border-radius: 5px;
-    padding: 3px;
+    padding: 5px 10px;
     cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: 5px;
+
+    &:hover {
+      background-color: #1d6830;
+      transform: translateY(-2px);
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 11px;
+      display: block;
+    }
 
     @media (max-width: 480px) {
-      padding: 2px;
-      font-size: 10px;
+      padding: 3px 8px;
+
+      a {
+        font-size: 9px;
+      }
     }
 
     @media (max-width: 768px) {
-      padding: 2.5px;
-      font-size: 12px;
+      padding: 4px 9px;
+
+      a {
+        font-size: 10px;
+      }
     }
   }
 
@@ -92,80 +119,96 @@ const StyledWrapper = styled.div`
     height: 10px;
     position: absolute;
     bottom: 10px;
-    right: 85px;
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: 50%;
     background-color: rgb(17, 4, 94);
 
     @media (max-width: 480px) {
       width: 8px;
       height: 8px;
-      right: 55%;
-      left: 30%;
     }
 
     @media (max-width: 768px) {
       width: 9px;
       height: 9px;
-      right: 55%;
-      left: 49%;
     }
   }
 
   .card__date {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 20px;
+    text-align: center;
 
     @media (max-width: 480px) {
-      margin-top: 20px;
+      margin-top: 15px;
     }
 
     @media (max-width: 768px) {
-      margin-top: 25px;
+      margin-top: 18px;
+    }
+
+    .date {
+      font-weight: 600;
+      font-size: 0.85em;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     }
   }
 
   .time {
-    font-size: 2em;
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-top: 2px;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
 
     @media (max-width: 480px) {
-      font-size: 1.5em;
+      font-size: 1.2em;
     }
 
     @media (max-width: 768px) {
-      font-size: 1.8em;
+      font-size: 1.4em;
     }
   }
 
   .popup {
-    background-color: #30723f;
+    background-color: rgba(48, 114, 63, 0.85);
+    backdrop-filter: blur(2px);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     font-size: 0.8em;
-    padding: 3px;
+    padding: 8px;
+    overflow: hidden;
+
+    p {
+      margin: 3px 0;
+    }
 
     @media (max-width: 480px) {
       font-size: 0.6em;
-      padding: 2px;
+      padding: 6px;
     }
 
     @media (max-width: 768px) {
       font-size: 0.7em;
-      padding: 2.5px;
+      padding: 7px;
     }
   }
 
   .popup .title {
-    font-size: 9px;
-    color: #9cbde2;
+    font-size: 10px;
+    color: #b4f7c1;
+    font-weight: bold;
+    margin-bottom: 3px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 
     @media (max-width: 480px) {
-      font-size: 7px;
+      font-size: 8px;
     }
 
     @media (max-width: 768px) {
-      font-size: 8px;
+      font-size: 9px;
     }
   }
 
@@ -176,24 +219,22 @@ const StyledWrapper = styled.div`
   }
 
   .card:hover {
-    transform: scale(1.2);
-    box-shadow: 0px 0px 10px 10px #289fed;
+    transform: scale(1.15);
+    box-shadow: 0px 0px 15px 5px rgba(43, 138, 65, 0.7);
+    z-index: 5;
   }
 
-  .card:hover .card__date,
-  .card:hover .popup {
-    opacity: 1;
+  /* Para garantir que funcione em dispositivos móveis também */
+  @media (max-width: 768px) {
+    .card:active {
+      transform: scale(1.15);
+      box-shadow: 0px 0px 15px 5px rgba(43, 138, 65, 0.7);
+      z-index: 5;
+    }
 
-    @media (max-width: 768px) {
-      .card:active {
-        transform: scale(1.2);
-        box-shadow: 0px 0px 10px 10px #289fed;
-      }
-
-      .card:active .card__date,
-      .card:active .popup {
-        opacity: 1;
-      }
+    .card:active .card__date,
+    .card:active .popup {
+      opacity: 1;
     }
   }
 `;
